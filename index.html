@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dictado por Voz</title>
+  </head>
+  <body>
+    <h1>TEXTUM</h1>
+
+    <label for="campoActivo" class="label">
+      📌 SELECCIONA UN CAMPO PARA DICTAR
+    </label>
+    <br />
+    <br />
+    <select id="campoActivo">
+      <option value="datos">Datos personales</option>
+      <option value="condicion">Condición o tema</option>
+      <option value="evaluacion" selected>Evaluación</option>
+      <option value="opciones">Opciones</option>
+    </select>
+    <br />
+    <br />
+    <label for="datos">Datos personales</label>
+    <br />
+    <textarea id="datos" placeholder="Nombre, edad, etc..."></textarea>
+    <button onclick="limpiarCampo('datos')">🧽 Limpiar</button>
+    <br />
+
+    <label for="condicion">Condición o tema</label>
+    <br />
+    <textarea
+      id="condicion"
+      placeholder="Ej. diagnóstico, situación..."
+    ></textarea>
+    <button onclick="limpiarCampo('condicion')">🧽 Limpiar</button>
+    <br />
+
+    <label for="evaluacion">Evaluación</label>
+    <br />
+    <textarea
+      id="evaluacion"
+      placeholder="Observaciones, resultados, análisis..."
+    ></textarea>
+    <button onclick="limpiarCampo('evaluacion')">🧽 Limpiar</button>
+    <br />
+
+    <label for="opciones">Opciones</label>
+    <br />
+    <textarea
+      id="opciones"
+      placeholder="Tratamientos, alternativas, sugerencias..."
+    ></textarea>
+    <button onclick="limpiarCampo('opciones')">🧽 Limpiar</button>
+    <br />
+
+    <button onclick="empezarDictado()">🎙️ Iniciar Dictado</button>
+    <button onclick="detenerDictado()">✋ Detener Dictado</button>
+    <button onclick="guardarTexto()">💾 Guardar Texto</button>
+    <button onclick="limpiarTodo()">🧹 Limpiar Todo</button>
+    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
