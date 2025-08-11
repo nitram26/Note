@@ -6,59 +6,62 @@
     <title>Dictado por Voz</title>
   </head>
   <body>
-    <h1>TEXTUM</h1>
+   
+ 
 
-    <label for="campoActivo" class="label">
-      📌 SELECCIONA UN CAMPO PARA DICTAR
-    </label>
-    <br />
-    <br />
-    <select id="campoActivo">
-      <option value="datos">Datos personales</option>
-      <option value="condicion">Condición o tema</option>
-      <option value="evaluacion" selected>Evaluación</option>
-      <option value="opciones">Opciones</option>
+        <h1 class="titulo">TEXTUM</h1>
+
+        <!-- DATOS PERSONALES -->
+        <h2 class="subtitulo" for="datos">Datos Iniciales</h2>
+        <br />
+        <textarea id="datos" placeholder="Nombre, edad, etc..."></textarea>
+        <button onclick="empezarDictado('datos')">🎙️ Dictar</button>
+        <button onclick="detenerDictado()">✋ Detener Dictado</button>
+        <button onclick="limpiarCampo('datos')">🧽 Limpiar</button>
+        <br />
+
+        <!-- CONDICIÓN -->
+        <h2 class="subtitulo" for="condicion">Tema</h2>
+        <br />
+        <textarea
+          id="condicion"
+          placeholder="Ej. diagnóstico, situación..."
+        ></textarea>
+        <button onclick="empezarDictado('condicion')">🎙️ Dictar</button>
+        <button onclick="detenerDictado()">✋ Detener Dictado</button>
+        <button onclick="limpiarCampo('condicion')">🧽 Limpiar</button>
+        <br />
+
+        <!-- EVALUACIÓN -->
+        <h2 class="subtitulo" for="evaluacion">Evaluación</h2>
+        <br />
+        <textarea
+          id="evaluacion"
+          placeholder="Observaciones, resultados, análisis..."
+        ></textarea>
+        <button onclick="empezarDictado('evaluacion')">🎙️ Dictar</button>
+        <button onclick="detenerDictado()">✋ Detener Dictado</button>
+        <button onclick="limpiarCampo('evaluacion')">🧽 Limpiar</button>
+        <br />
+
+        <!-- OPCIONES -->
+        <h2 class="subtitulo" for="opciones">Opciones</h2>
+        <br />
+        <textarea
+          id="opciones"
+          placeholder="Tratamientos, alternativas, sugerencias..."
+        ></textarea>
+        <button onclick="empezarDictado('opciones')">🎙️ Dictar</button>
+        <button onclick="detenerDictado()">✋ Detener Dictado</button>
+        <button onclick="limpiarCampo('opciones')">🧽 Limpiar</button>
+        <br />
+
+        <!-- BOTONES GENERALES -->
+ 
+        <button onclick="guardarTexto()">💾 Guardar Texto</button>
+        <button onclick="limpiarTodo()">🧹 Limpiar Todo</button>
+      </option>
     </select>
-    <br />
-    <br />
-    <label for="datos">Datos personales</label>
-    <br />
-    <textarea id="datos" placeholder="Nombre, edad, etc..."></textarea>
-    <button onclick="limpiarCampo('datos')">🧽 Limpiar</button>
-    <br />
-
-    <label for="condicion">Condición o tema</label>
-    <br />
-    <textarea
-      id="condicion"
-      placeholder="Ej. diagnóstico, situación..."
-    ></textarea>
-    <button onclick="limpiarCampo('condicion')">🧽 Limpiar</button>
-    <br />
-
-    <label for="evaluacion">Evaluación</label>
-    <br />
-    <textarea
-      id="evaluacion"
-      placeholder="Observaciones, resultados, análisis..."
-    ></textarea>
-    <button onclick="limpiarCampo('evaluacion')">🧽 Limpiar</button>
-    <br />
-
-    <label for="opciones">Opciones</label>
-    <br />
-    <textarea
-      id="opciones"
-      placeholder="Tratamientos, alternativas, sugerencias..."
-    ></textarea>
-    <button onclick="limpiarCampo('opciones')">🧽 Limpiar</button>
-    <br />
-
-    <button onclick="empezarDictado()">🎙️ Iniciar Dictado</button>
-    <button onclick="detenerDictado()">✋ Detener Dictado</button>
-    <button onclick="guardarTexto()">💾 Guardar Texto</button>
-    <button onclick="limpiarTodo()">🧹 Limpiar Todo</button>
-    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <script src="./js/index.js"></script>
   </body>
 </html>
