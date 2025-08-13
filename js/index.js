@@ -29,16 +29,16 @@ function guardarTexto() {
   const opciones = document.getElementById("opciones").value;
 
   const contenido =
-    "DATOS PERSONALES:\n" +
+    "SCRIPTUM 1:\n" +
     datos +
     "\n\n" +
-    "CONDICIÓN/TEMA:\n" +
+    "SCRIPTUM 2:\n" +
     condicion +
     "\n\n" +
-    "EVALUACIÓN:\n" +
+    "SCRIPTUM 3:\n" +
     evaluacion +
     "\n\n" +
-    "OPCIONES:\n" +
+    "SCRIPTUM 4:\n" +
     opciones;
 
   const blob = new Blob([contenido], { type: "text/plain" });
